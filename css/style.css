@@ -1,0 +1,173 @@
+:root {
+  font-size: 10px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #fdfdfd;
+  color: white;
+}
+
+header {
+  width: 100%;
+  background: #fad898;
+  padding: 15px 0;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  max-width: 1400px;
+  margin: auto;
+  font-size: 1rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+}
+
+.logo span {
+  font-weight: bold;
+  font-size: 20px;
+  color: #ffffff;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 120px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #000000;
+  font-size: 20px;
+  font-family: Optima, sans-serif;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.nav-links a:hover {
+  opacity: 3.0;
+  color: #ffffff;
+}
+
+.footer {
+  background: #fad898;
+  padding: 60px 20px;
+  border-top: 2px solid #f4b83c;
+  margin-top: 120px;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 40px;
+  max-width: 1300px;
+  margin: auto;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.footer-logo img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.footer-col h3,
+.footer-col h4 {
+  color: #000000;
+  margin-bottom: 15px;
+  font-size: 1.9rem;
+}
+
+.footer-col p {
+  color: #000000;
+  margin-bottom: 15px;
+  font-size: 1.9rem;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 7px;
+  color: #000000;
+  font-size: 1.4rem;
+}
+
+.footer-col ul li a {
+  text-decoration: none;
+  color: #000000;
+  transition: 0.3s;
+}
+
+.footer-col ul li a:hover {
+  color: #ffffff;
+}
+
+.newsletter {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.newsletter input {
+  padding: 12px;
+  border: 2px solid #f4b83c;
+  border-radius: 8px;
+  background: #111;
+  color: #fff;
+  font-size: 1.4rem;
+}
+
+.newsletter button {
+  padding: 12px;
+  background: #f4b83c;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.newsletter button:hover {
+  opacity: 0.8;
+}
+
+.footer-bottom {
+  margin-top: 40px;
+  text-align: center;
+  padding-top: 20px;
+  border-top: 1px solid #000000;
+}
+
+.footer-bottom p {
+  color: #000000;
+  font-size: 1.3rem;
+}

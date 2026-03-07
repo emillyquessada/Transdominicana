@@ -1,173 +1,397 @@
+/* --- CONFIGURAÇÕES GERAIS --- */
 :root {
-  font-size: 10px;
+    font-size: 10px; /* Facilita o uso de rem (1.0rem = 10px) */
 }
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
 }
 
 body {
-  background: #fdfdfd;
-  color: white;
+    background: #fdfdfd;
+    color: #333; /* Texto padrão escuro para melhor leitura */
+    overflow-x: hidden; /* Garante que nada escape pela direita */
 }
 
-header {
-  width: 100%;
-  background: #fad898;
-  padding: 15px 0;
+/* --- CABEÇALHO (HEADER) --- */
+
+/* Faixa superior decorativa */
+header::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 10px;
+    background: #ffc919;
 }
 
+/* Barra Branca (Logo e Fale Conosco) */
 .navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 90%;
-  max-width: 1400px;
-  margin: auto;
-  font-size: 1rem;
-}
-
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 15px 5%;
 }
 
 .logo img {
-  border-radius: 50%;
-  width: 60px;
-  height: 60px;
+    width: 250px;
+    height: auto;
 }
 
-.logo span {
-  font-weight: bold;
-  font-size: 20px;
-  color: #ffffff;
+.fale-conosco img {
+    height: 70px;
+    width: auto;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.fale-conosco img:hover {
+    transform: scale(1.05);
+}
+
+/* Barra Amarela (Links de Navegação) */
+.header-links {
+    width: 100%;
+    background: #ffc82f;
+    padding: 12px 0;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
 }
 
 .nav-links {
-  list-style: none;
-  display: flex;
-  gap: 120px;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
 }
 
 .nav-links a {
-  text-decoration: none;
-  color: #000000;
-  font-size: 20px;
-  font-family: Optima, sans-serif;
-  font-weight: 600;
-  transition: 0.2s;
+    text-decoration: none;
+    color: #000000;
+    font-size: 1.6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
-  opacity: 3.0;
-  color: #ffffff;
+    color: #ff5202;
 }
 
+/* --- SEÇÃO HERO --- */
+
+.hero {
+    display: flex;
+    width: 100%;
+    min-height: 80vh;
+    background: #ffffff;
+    align-items: center;
+    overflow: hidden;
+}
+
+.hero-container {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 8%; /* Espaçamento lateral do texto */
+}
+
+.hero-text {
+    flex: 0 0 45%; /* Ocupa 45% da largura */
+    z-index: 2;
+}
+
+.hero-text h1 {
+    font-size: 5.5rem;
+    font-weight: 900;
+    line-height: 1.1;
+    color: #000000;
+}
+
+.hero-text h1 span {
+    color: #ffc400;
+}
+
+.hero-text p {
+    margin-top: 25px;
+    font-size: 2rem;
+    line-height: 1.6;
+    color: #333333;
+}
+
+/* Imagem no canto direito extremo */
+.hero-img {
+    flex:  50%;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+
+.hero-img img {
+    width: 100%;
+    max-width: 900px; /* Aumentado para impacto visual */
+    height: auto;
+    object-fit: cover;
+    margin-right: -2px;
+    border-radius: 250px; 
+}
+
+/* --- BOTÃO --- */
+
+.btn-primeiro {
+    display: inline-block;
+    margin-top: 35px;
+    padding: 18px 45px;
+    background: #000000;
+    color: #ffc82f;
+    text-decoration: none;
+    font-size: 1.8rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    border: 2px solid #000;
+    cursor: pointer;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.btn-primeiro:hover {
+    background: #ffc82f;
+    color: #000;
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(255, 200, 47, 0.4);
+}
+
+/* --- SEÇÃO FROTA (TRATOR E CAÇAMBA) --- */
+
+.frota-preview {
+    padding: 60px 5%;
+    background: #fdfdfd;
+}
+
+.container-maquinas {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    flex-wrap: wrap;
+}
+
+.container-maquinas img {
+    height: 180px;
+    width: auto;
+    filter: drop-shadow(0 10px 15px rgba(0,0,0,0.1));
+    transition: transform 0.3s ease;
+}
+
+.container-maquinas img:hover {
+    transform: scale(1.05);
+}
+
+/* --- RODAPÉ (FOOTER) - VERSÃO PREMIUM --- */
+
 .footer {
-  background: #fad898;
-  padding: 60px 20px;
-  border-top: 2px solid #f4b83c;
-  margin-top: 120px;
+    background: #1a1a1a; /* Cinza quase preto para elegância */
+    padding: 80px 8% 30px;
+    border-top: 6px solid #ffc82f; /* Detalhe em amarelo no topo */
+    margin-top: 100px;
+    color: #ffffff;
 }
 
 .footer-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 40px;
-  max-width: 1300px;
-  margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 60px;
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
+/* Coluna da Logo e Texto */
 .footer-logo {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
 }
 
 .footer-logo img {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
+    width: 70px; /* Logo um pouco maior */
+    height: auto;
+    filter: brightness(1.2); /* Deixa a logo mais viva no fundo escuro */
 }
 
-.footer-col h3,
-.footer-col h4 {
-  color: #000000;
-  margin-bottom: 15px;
-  font-size: 1.9rem;
+.footer-col h3 {
+    color: #ffc82f; /* Nome da empresa em amarelo */
+    font-size: 2.4rem;
+    font-weight: 800;
 }
 
 .footer-col p {
-  color: #000000;
-  margin-bottom: 15px;
-  font-size: 1.9rem;
+    font-size: 1.5rem;
+    line-height: 1.8;
+    color: #cccccc; /* Texto cinza claro para não cansar a vista */
 }
 
+/* Títulos das Colunas */
+.footer-col h4 {
+    color: #ffffff;
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+    position: relative;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Linha decorativa embaixo dos títulos */
+.footer-col h4::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    width: 40px;
+    height: 3px;
+    background: #ffc82f;
+}
+
+/* Links do Rodapé */
 .footer-col ul {
-  list-style: none;
-  padding: 0;
+    list-style: none;
 }
 
 .footer-col ul li {
-  margin-bottom: 7px;
-  color: #000000;
-  font-size: 1.4rem;
+    margin-bottom: 15px;
 }
 
 .footer-col ul li a {
-  text-decoration: none;
-  color: #000000;
-  transition: 0.3s;
+    text-decoration: none;
+    color: #bbbbbb;
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
 }
 
 .footer-col ul li a:hover {
-  color: #ffffff;
+    color: #ffc82f;
+    padding-left: 8px; /* Efeito de deslize ao passar o mouse */
 }
 
-.newsletter {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
+/* Link de Destaque */
+.link-destaque {
+    font-weight: 700;
+    color: #ffc82f !important;
+    border-bottom: 1px dashed #ffc82f;
 }
 
-.newsletter input {
-  padding: 12px;
-  border: 2px solid #f4b83c;
-  border-radius: 8px;
-  background: #111;
-  color: #fff;
-  font-size: 1.4rem;
-}
-
-.newsletter button {
-  padding: 12px;
-  background: #f4b83c;
-  border: none;
-  border-radius: 8px;
-  font-size: 1.4rem;
-  font-weight: bold;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.newsletter button:hover {
-  opacity: 0.8;
-}
-
+/* Parte Inferior (Copyright) */
 .footer-bottom {
-  margin-top: 40px;
-  text-align: center;
-  padding-top: 20px;
-  border-top: 1px solid #000000;
+    margin-top: 80px;
+    text-align: center;
+    padding-top: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .footer-bottom p {
-  color: #000000;
-  font-size: 1.3rem;
+    font-size: 1.3rem;
+    color: #888888;
+    letter-spacing: 0.5px;
+}
+
+/* Ajuste de responsividade para telas pequenas */
+@media (max-width: 768px) {
+    .footer {
+        padding: 60px 5% 20px;
+    }
+    
+    .footer-container {
+        gap: 40px;
+        text-align: center;
+    }
+
+    .footer-col h4::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .footer-col ul li a {
+        justify-content: center;
+    }
+}
+/* --- RESPONSIVIDADE PARA TABLETS E CELULARES --- */
+
+/* Ajustes para telas médias (Tablets) */
+@media (max-width: 1024px) {
+    .hero-container {
+        padding-left: 5%;
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .hero-text {
+        flex: 1;
+        max-width: 100%;
+    }
+
+    .hero-img {
+        flex: 1;
+        justify-content: center;
+    }
+
+    .hero-text h1 {
+        font-size: 4rem;
+    }
+}
+
+/* Ajustes para telas pequenas (Celulares) */
+@media (max-width: 768px) {
+    /* Header - Coluna para o menu */
+    .navbar {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    /* Hero */
+    .hero {
+        min-height: auto;
+        padding: 40px 5%;
+    }
+
+    .hero-text h1 {
+        font-size: 3.5rem;
+    }
+
+    .hero-text p {
+        font-size: 1.6rem;
+    }
+
+    .hero-img img {
+        border-radius: 50px; /* Ajuste na curva da imagem */
+    }
+
+    /* Botão */
+    .btn-primeiro {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Frota */
+    .container-maquinas {
+        gap: 30px;
+    }
+
+    .container-maquinas img {
+        height: 100px;
+    }
 }

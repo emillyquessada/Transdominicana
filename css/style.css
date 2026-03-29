@@ -127,9 +127,9 @@ header::before {
 
 /* Imagem no canto direito extremo */
 .hero-img {
-    flex:  50%;
+    flex: 50%;
     display: flex;
-    justify-content:center;
+    justify-content: center;
     align-items: center;
 }
 
@@ -180,6 +180,7 @@ header::before {
     justify-content: center;
     gap: 80px;
     flex-wrap: wrap;
+    align-items: center;
 }
 
 .container-maquinas img {
@@ -191,6 +192,29 @@ header::before {
 
 .container-maquinas img:hover {
     transform: scale(1.05);
+
+}
+
+/* Ajuste no Título da Frota */
+.container-maquinas h1 {
+    font-size: 30px;
+    color: #000;
+    text-align: center; /* Alinhamento corrigido */
+    width: 100%;      /* Ocupa a largura total para alinhar o texto */
+}
+
+.container-maquinas span {
+    color: #ffc400;
+}
+
+/* Ajuste no Parágrafo da Frota */
+.container-maquinas p {
+    font-size: 20px;
+    text-align: center; /* Garante o alinhamento à esquerda */
+    color: #333;
+    line-height: 1.6;
+    display: block;   /* Removido flex para evitar comportamentos inesperados no texto */
+    width: 100%;      /* Garante que o texto use o espaço disponível */
 }
 
 /* --- RODAPÉ (FOOTER) - VERSÃO PREMIUM --- */
@@ -394,4 +418,9 @@ header::before {
     .container-maquinas img {
         height: 100px;
     }
+}
+
+/*Dar Scroll devagar pra não ficar bagunçado*/
+html {
+    scroll-behavior: smooth;
 }

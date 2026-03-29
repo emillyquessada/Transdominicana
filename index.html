@@ -7,28 +7,36 @@
     <title>Transdominicana | Transportes & Terraplanagem</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" href="Img/logo2.png" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 
 <body>
+    <a href="https://wa.me/551122413718" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+        <span>Fale Conosco</span>
+    </a>
+
     <header>
         <nav class="navbar">
             <div class="logo">
                 <img src="Img/logo.png" alt="Logo Transdominicana">
             </div>
-            
             <div class="fale-conosco">
-                <img src="Img/faleconosco.png" alt="Fale Conosco">
+                <a href="https://wa.me/5511999999999" target="_blank">
+                    <img src="Img/faleconosco.png" alt="Fale Conosco">
+                </a>
             </div>
         </nav>
 
         <div class="header-links">
             <ul class="nav-links">
-                <a href="#home">Início</a>
-                <a href="#equipamento">Equipamentos</a>
-                <a href="#clientes">Clientes</a>
-                <a href="#contato">Contato</a>
-                <a href="#sobre">Sobre Nós</a>
+                <li><a href="#home">Início</a></li>
+                <li><a href="#equipamento">Equipamentos</a></li>
+                <li><a href="#clientes">Clientes</a></li>
+                <li><a href="#contato">Contato</a></li>
+                <li><a href="#sobre">Sobre Nós</a></li>
             </ul>
         </div>
     </header>
@@ -38,70 +46,99 @@
             <div class="hero-container">
                 <div class="hero-text">
                     <h1>Seja <br> <span>Bem Vindo!</span></h1>
-                    <p>
-                        A Transdominicana Transportes e Terraplanagem Ltda coloca à disposição de seus clientes soluções 
-                        individualizadas, através de atendimento personalizado, para assegurar com eficiência e qualidade 
-                        a prestação de bons serviços que acompanhem o desenvolvimento da sua empresa.
-                    </p>
-                    <a href="contato" class="btn-primeiro">Começar Projeto →</a>
+                    <p>Soluções em transporte e terraplanagem com eficiência, segurança e atendimento personalizado para
+                        o seu projeto.</p>
+                    <a href="#contato" class="btn-primeiro">Solicitar Orçamento →</a>
                 </div>
-
                 <div class="hero-img">
-                    <img src="Img/caminhaotanque.png" alt="Caminhão Tanque">
+                    <img src="Img/caminhaotanque1.jpg" alt="Caminhão Tanque">
                 </div>
             </div>
         </section>
 
         <section id="equipamento" class="maquinas">
-            <div class="container-maquinas">
-                <h1>Nossos <span>Equipamentos:</span> </h1>
-                <p>Fazemos carregamentos de produtos químicos <br>
-                com Caminhão Tanque!</p>
-                <img src="Img/tratores.jpg" alt="Trator">
-                <img src="Img/caminhao.jpg" alt="Caminhão">
-                <img src="Img/Escavadeira.jpg" alt="Escavadeira">
+            <div class="titulo-secao">
+                <h1>Nossos <span>Equipamentos</span></h1>
+                <p>Tecnologia e potência para serviços pesados e transporte químico.</p>
+            </div>
+            <div class="galeria-equipamentos">
+                <div class="card-equipamento">
+                    <div class="img-box"><img src="Img/tratores.jpg" alt="Trator"></div>
+                    <div class="info-maquina"><span>Tratores</span></div>
+                </div>
+                <div class="card-equipamento">
+                    <div class="img-box"><img src="Img/caminhao.jpg" alt="Caminhão"></div>
+                    <div class="info-maquina"><span>Caminhões</span></div>
+                </div>
+                <div class="card-equipamento">
+                    <div class="img-box"><img src="Img/Escavadeira.jpg" alt="Escavadeira"></div>
+                    <div class="info-maquina"><span>Escavadeiras</span></div>
+                </div>
+            </div>
+        </section>
 
+        <section id="clientes" class="clientes">
+            <div class="titulo-secao">
+                <h1>Nossos <span>Clientes</span></h1>
+                <p>Empresas de renome que confiam em nosso trabalho.</p>
+            </div>
+            <div class="container-clientes">
+                <div class="card-clientes-moldura">
+                    <img src="Img/Clientes.png" alt="Logos Clientes" class="img-clientes">
+                </div>
+            </div>
+        </section>
+
+        <section id="contato" class="contato">
+            <div class="container-contato">
+                <div class="contato-info">
+                    <h2>Entre em <span>Contato</span></h2>
+                    <p>Estamos prontos para atender sua demanda. Envie uma mensagem ou ligue para nós.</p>
+
+                    <div class="item-contato">
+                    </div>
+                    <div class="item-contato">
+                        <i class="fab fa-whatsapp"></i>
+                        <div>
+                            <p>WhatsApp:</p>
+                            <strong>+55 (11) 2241-3718</strong>
+                        </div>
+                    </div>
+                    <div class="item-contato">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <p>E-mail:</p>
+                            <strong>transdominicana@transdominicana.com.br</strong>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
 
-    <footer class="footer">
+    <footer class="footer" id="sobre">
         <div class="footer-container">
             <div class="footer-col">
                 <div class="footer-logo">
-                    <img src="Img/logo2.png" alt="Logo Transdominicana">
+                    <img src="Img/logo2.png" alt="Logo">
                     <h3>Transdominicana</h3>
                 </div>
-                <p>Garantimos a melhor opção em agilidade, custo e segurança.</p>
+                <p>Garantimos a melhor opção em agilidade, custo e segurança para transportes e terraplanagem.</p>
             </div>
-
             <div class="footer-col">
-                <h4>Navegação</h4>
+                <h4>Links Úteis</h4>
                 <ul>
                     <li><a href="#home">Início</a></li>
-                    <li><a href="#sobre">Sobre Nós</a></li>
-                    <li><a href="#equipamentos">Equipamentos</a></li>
+                    <li><a href="#equipamento">Máquinas</a></li>
                     <li><a href="#clientes">Clientes</a></li>
                     <li><a href="#contato">Contato</a></li>
                 </ul>
             </div>
-
-            <div class="footer-col">
-                <h4>Alguns Serviços</h4>
-                <ul>
-                    <li>Terraplanagem (todos os serviços)</li>
-                    <li>Locação de máquinas</li>
-                    <li>Locação de equipamentos</li>
-                    <li>Compactação</li>
-                    <li>Escavação em geral</li>
-                </ul>
-            </div>
         </div>
-
         <div class="footer-bottom">
             <p>© 2026 Transdominicana — Todos os direitos reservados.</p>
         </div>
     </footer>
-
 </body>
+
 </html>
